@@ -1,0 +1,3 @@
+[submodule "instawow"]
+	path = instawow
+	url = https://github.com/layday/instawow.git
