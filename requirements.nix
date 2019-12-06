@@ -99,10 +99,10 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.2.1";
+      name = "alembic-1.3.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/6f/42/48447bf41287bc577e4f340e7c28578e322567f5622a915bdfa01c83dc76/alembic-1.2.1.tar.gz";
-        sha256 = "9f907d7e8b286a1cfb22db9084f9ce4fde7ad7956bb496dc7c952e10ac90e36a";
+        url = "https://files.pythonhosted.org/packages/84/64/493c45119dce700a4b9eeecc436ef9e8835ab67bae6414f040cdc7b58f4b/alembic-1.3.1.tar.gz";
+        sha256 = "49277bb7242192bbb9eac58fed4fe02ec6c3a2a4b4345d2171197459266482b2";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -136,10 +136,10 @@ let
     };
 
     "attrs" = python.mkDerivation {
-      name = "attrs-19.2.0";
+      name = "attrs-19.3.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/bd/69/2833f182ea95ea1f17e9a7559b8b92ebfdf4f68b5c58b15bc10f47bc2e01/attrs-19.2.0.tar.gz";
-        sha256 = "f913492e1663d3c36f502e5e9ba6cd13cf19d7fab50aa13239e420fef95e1396";
+        url = "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz";
+        sha256 = "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [
@@ -218,14 +218,40 @@ let
       };
     };
 
-    "instawow" = python.mkDerivation {
-      name = "instawow-1.6.0";
+    "importlib-metadata" = python.mkDerivation {
+      name = "importlib-metadata-1.2.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/58/e5/ffeec394a2598d2c888dbaea8f2138bd967298b45935a7f5a0edd2bb3f28/instawow-1.6.0.tar.gz";
-        sha256 = "7c883035502fd5419f04a2fd25c5e8460038038debe0eab2dd685cac2089c766";
+        url = "https://files.pythonhosted.org/packages/9b/42/86a31ce5fd7e3c5fc9071cec95d0aab11deb2fd63eed27315f520d120bfd/importlib_metadata-1.2.0.tar.gz";
+        sha256 = "41e688146d000891f32b1669e8573c57e39e5060e7f5f647aa617cd9a9568278";
 };
       doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+        self."setuptools-scm"
+        self."wheel"
+      ];
+      propagatedBuildInputs = [
+        self."zipp"
+      ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "http://importlib-metadata.readthedocs.io/";
+        license = licenses.asl20;
+        description = "Read metadata from Python packages";
+      };
+    };
+
+    "instawow" = python.mkDerivation {
+      name = "instawow-1.6.1";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/05/91/9df52e57b8121d97190ad325630235d56c8e22199188febb1aed72fe46e6/instawow-1.6.1.tar.gz";
+        sha256 = "17f8265d619b1ed197a8a7b0c0e6b8dff37c9bf65c36493e3a3efe0124a001e1";
+};
+      doCheck = commonDoCheck;
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+        self."setuptools-scm"
+        self."wheel"
+      ];
       propagatedBuildInputs = [
         self."aiohttp"
         self."alembic"
@@ -235,11 +261,13 @@ let
         self."click"
         self."fuzzywuzzy"
         self."idna"
+        self."importlib-metadata"
         self."jinja2"
         self."loguru"
         self."lupa"
         self."mako"
         self."markupsafe"
+        self."more-itertools"
         self."multidict"
         self."prompt-toolkit"
         self."pydantic"
@@ -248,10 +276,10 @@ let
         self."questionary"
         self."six"
         self."sqlalchemy"
-        self."texttable"
         self."typing-extensions"
         self."wcwidth"
         self."yarl"
+        self."zipp"
       ];
       meta = with pkgs.stdenv.lib; {
         homepage = "http://github.com/layday/instawow";
@@ -279,10 +307,10 @@ let
     };
 
     "loguru" = python.mkDerivation {
-      name = "loguru-0.3.2";
+      name = "loguru-0.4.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/5c/de/42db5a4bf0f02786a54ed34b676536499c74bc09540c60d70022652d1c5b/loguru-0.3.2.tar.gz";
-        sha256 = "e3138bfdee5f57481a2a6e078714be20f8c71ab1ff3f07f8fb1cfa25191fed2a";
+        url = "https://files.pythonhosted.org/packages/1d/85/eb26882a550144b5ae95cd2be1d24794969817fbcca6a66db8089b37df3b/loguru-0.4.0.tar.gz";
+        sha256 = "d5ddf363b7e0e562652f283f74a89bf35601baf16b70f2cd2736a2f8c6638748";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -344,11 +372,27 @@ let
       };
     };
 
-    "multidict" = python.mkDerivation {
-      name = "multidict-4.5.2";
+    "more-itertools" = python.mkDerivation {
+      name = "more-itertools-8.0.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7f/8f/b3c8c5b062309e854ce5b726fc101195fbaa881d306ffa5c2ba19efa3af2/multidict-4.5.2.tar.gz";
-        sha256 = "024b8129695a952ebd93373e45b5d341dbb87c17ce49637b34000093f243dd4f";
+        url = "https://files.pythonhosted.org/packages/5a/e7/b7883994ae36a5167214ea573b10dce626c65d9eeea1fa1e853b8e5a3b73/more-itertools-8.0.0.tar.gz";
+        sha256 = "53ff73f186307d9c8ef17a9600309154a6ae27f25579e80af4db8f047ba14bc2";
+};
+      doCheck = commonDoCheck;
+      buildInputs = commonBuildInputs ++ [ ];
+      propagatedBuildInputs = [ ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "https://github.com/erikrose/more-itertools";
+        license = licenses.mit;
+        description = "More routines for operating on iterables, beyond itertools";
+      };
+    };
+
+    "multidict" = python.mkDerivation {
+      name = "multidict-4.6.1";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/8a/74/61547af55c077b8d2e3648c2af74c08fa1e382665b290468db7ba54db2ea/multidict-4.6.1.tar.gz";
+        sha256 = "5159c4975931a1a78bf6602bbebaa366747fce0a56cb2111f44789d2c45e379f";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -380,10 +424,10 @@ let
     };
 
     "pydantic" = python.mkDerivation {
-      name = "pydantic-0.32.2";
+      name = "pydantic-1.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/56/dd/295bd423d42e01604b9656a0dfcd3dc6d49731595fe9bcdaf6e2df797ef4/pydantic-0.32.2.tar.gz";
-        sha256 = "6a9335c968e13295430a208487e74d69fef40168b72dea8d975765d14e2da660";
+        url = "https://files.pythonhosted.org/packages/50/1c/09c63d7ceff93ce8b3202d631fdaa3eee986bf3719e3902c1c8c79f355d1/pydantic-1.2.tar.gz";
+        sha256 = "da10b034750addbd95a328654d20364c479f4e2e26e0f72933204d61cbc8fa78";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -396,10 +440,10 @@ let
     };
 
     "python-dateutil" = python.mkDerivation {
-      name = "python-dateutil-2.8.0";
+      name = "python-dateutil-2.8.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ad/99/5b2e99737edeb28c71bcbec5b5dda19d0d9ef3ca3e92e3e925e7c0bb364c/python-dateutil-2.8.0.tar.gz";
-        sha256 = "c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e";
+        url = "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz";
+        sha256 = "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [
@@ -484,10 +528,10 @@ let
     };
 
     "six" = python.mkDerivation {
-      name = "six-1.12.0";
+      name = "six-1.13.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz";
-        sha256 = "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73";
+        url = "https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz";
+        sha256 = "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -500,10 +544,10 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.10";
+      name = "sqlalchemy-1.3.11";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/14/0e/487f7fc1e432cec50d2678f94e4133f2b9e9356e35bacc30d73e8cb831fc/SQLAlchemy-1.3.10.tar.gz";
-        sha256 = "0f0768b5db594517e1f5e1572c73d14cf295140756431270d89496dc13d5e46c";
+        url = "https://files.pythonhosted.org/packages/34/5c/0e1d7ad0ca52544bb12f9cb8d5cc454af45821c92160ffedd38db0a317f6/SQLAlchemy-1.3.11.tar.gz";
+        sha256 = "afa5541e9dea8ad0014251bc9d56171ca3d8b130c9627c6cb3681cff30be3f8a";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -515,27 +559,11 @@ let
       };
     };
 
-    "texttable" = python.mkDerivation {
-      name = "texttable-1.6.2";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/82/a8/60df592e3a100a1f83928795aca210414d72cebdc6e4e0c95a6d8ac632fe/texttable-1.6.2.tar.gz";
-        sha256 = "eff3703781fbc7750125f50e10f001195174f13825a92a45e9403037d539b4f4";
-};
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/foutaise/texttable/";
-        license = licenses.mit;
-        description = "module for creating simple ASCII tables";
-      };
-    };
-
     "typing-extensions" = python.mkDerivation {
-      name = "typing-extensions-3.7.4";
+      name = "typing-extensions-3.7.4.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/59/b6/21774b993eec6e797fbc49e53830df823b69a3cb62f94d36dfb497a0b65a/typing_extensions-3.7.4.tar.gz";
-        sha256 = "2ed632b30bb54fc3941c382decfd0ee4148f5c591651c9272473fea2c6397d95";
+        url = "https://files.pythonhosted.org/packages/e7/dd/f1713bc6638cc3a6a23735eff6ee09393b44b96176d3296693ada272a80b/typing_extensions-3.7.4.1.tar.gz";
+        sha256 = "091ecc894d5e908ac75209f10d5b4f118fbdb2eb1ede6a63544054bb1edb41f2";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -580,10 +608,10 @@ let
     };
 
     "yarl" = python.mkDerivation {
-      name = "yarl-1.3.0";
+      name = "yarl-1.4.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/fb/84/6d82f6be218c50b547aa29d0315e430cf8a23c52064c92d0a8377d7b7357/yarl-1.3.0.tar.gz";
-        sha256 = "024ecdc12bc02b321bc66b41327f930d1c2c543fa9a561b39861da9388ba7aa9";
+        url = "https://files.pythonhosted.org/packages/d6/67/6e2507586eb1cfa6d55540845b0cd05b4b77c414f6bca8b00b45483b976e/yarl-1.4.2.tar.gz";
+        sha256 = "58cd9c469eced558cd81aa3f484b2924e8897049e06889e8ff2510435b7ef74b";
 };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -595,6 +623,28 @@ let
         homepage = "https://github.com/aio-libs/yarl/";
         license = licenses.asl20;
         description = "Yet another URL library";
+      };
+    };
+
+    "zipp" = python.mkDerivation {
+      name = "zipp-0.6.0";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/57/dd/585d728479d97d25aeeb9aa470d36a4ad8d0ba5610f84e14770128ce6ff7/zipp-0.6.0.tar.gz";
+        sha256 = "3718b1cbcd963c7d4c5511a8240812904164b7f381b647143a89d3b98f9bcd8e";
+};
+      doCheck = commonDoCheck;
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+        self."setuptools-scm"
+        self."wheel"
+      ];
+      propagatedBuildInputs = [
+        self."more-itertools"
+      ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "https://github.com/jaraco/zipp";
+        license = licenses.mit;
+        description = "Backport of pathlib-compatible object wrapper for zip files";
       };
     };
   };
