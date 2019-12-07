@@ -2,18 +2,15 @@ name: Update Nix expression
 on:
   schedule:
   - cron: '0 0 * * *'
+  push:
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-    - name: Check-out the master branch
+    - name: Check-out the master branch of our repo
       uses: actions/checkout@v1
       with:
         submodules: true
-    - name: Configure git
-      run: |
-        git config user.email 'layday@protonmail.com'
-        git config user.name  'layday-on-the-cloud'
     - name: Install Nix
       uses: cachix/install-nix-action@v6
     - name: Install Python
@@ -26,15 +23,10 @@ jobs:
     - name: Generate Nix expression from PyPI package
       run: |
         nox -f instawow/noxfile.py -s nixify -- ..
-    - name: Check if the requirements have changed
-      run: |
-        git diff --exit-code || echo '::set-env name=HAS_CHANGES::1'
     - name: Commit changes
-      if: env.HAS_CHANGES
-      run: |
-        git commit -a -m 'Update'
-    - name: Push changes to master
-      if: env.HAS_CHANGES
-      uses: ad-m/github-push-action@master
+      uses: stefanzweifel/git-auto-commit-action@v2.4.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Update
+        branch: ${{ github.head_ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
