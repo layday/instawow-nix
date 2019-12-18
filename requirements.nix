@@ -100,10 +100,10 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.3.1";
+      name = "alembic-1.3.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/84/64/493c45119dce700a4b9eeecc436ef9e8835ab67bae6414f040cdc7b58f4b/alembic-1.3.1.tar.gz";
-        sha256 = "49277bb7242192bbb9eac58fed4fe02ec6c3a2a4b4345d2171197459266482b2";
+        url = "https://files.pythonhosted.org/packages/dc/6d/3c1411dfdcf089ec89ce5e2222deb2292f39b6b1a5911222e15af9fe5a92/alembic-1.3.2.tar.gz";
+        sha256 = "3b0cb1948833e062f4048992fbc97ecfaaaac24aaa0d83a1202a99fb58af8c6d";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -227,10 +227,10 @@ let
     };
 
     "importlib-metadata" = python.mkDerivation {
-      name = "importlib-metadata-1.2.0";
+      name = "importlib-metadata-1.3.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/9b/42/86a31ce5fd7e3c5fc9071cec95d0aab11deb2fd63eed27315f520d120bfd/importlib_metadata-1.2.0.tar.gz";
-        sha256 = "41e688146d000891f32b1669e8573c57e39e5060e7f5f647aa617cd9a9568278";
+        url = "https://files.pythonhosted.org/packages/cb/bb/7a935a48bf751af244090a7bd558769942cf13a7eba874b8b25538f3db01/importlib_metadata-1.3.0.tar.gz";
+        sha256 = "073a852570f92da5f744a3472af1b61e28e9f78ccf0c9117658dc32b15de7b45";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -250,10 +250,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.6.1";
+      name = "instawow-1.6.2.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/05/91/9df52e57b8121d97190ad325630235d56c8e22199188febb1aed72fe46e6/instawow-1.6.1.tar.gz";
-        sha256 = "17f8265d619b1ed197a8a7b0c0e6b8dff37c9bf65c36493e3a3efe0124a001e1";
+        url = "https://files.pythonhosted.org/packages/aa/0b/a335e508bc991d4caf86c711eb31df332d3770372a53324bf59a90ac0d0e/instawow-1.6.2.1.tar.gz";
+        sha256 = "18b4a56ee0297d008664abead5ed6d7c1a13b400dea64b6f11b417dc28864a0a";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -388,10 +388,10 @@ let
     };
 
     "more-itertools" = python.mkDerivation {
-      name = "more-itertools-8.0.0";
+      name = "more-itertools-8.0.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/5a/e7/b7883994ae36a5167214ea573b10dce626c65d9eeea1fa1e853b8e5a3b73/more-itertools-8.0.0.tar.gz";
-        sha256 = "53ff73f186307d9c8ef17a9600309154a6ae27f25579e80af4db8f047ba14bc2";
+        url = "https://files.pythonhosted.org/packages/4e/b2/e9e512cccde6c54bf66a8e5820a2af779eb8235028627002ca90d4f75bea/more-itertools-8.0.2.tar.gz";
+        sha256 = "b84b238cce0d9adad5ed87e745778d20a3f8487d0f0cb8b8a586816c7496458d";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -405,10 +405,10 @@ let
     };
 
     "multidict" = python.mkDerivation {
-      name = "multidict-4.6.1";
+      name = "multidict-4.7.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/8a/74/61547af55c077b8d2e3648c2af74c08fa1e382665b290468db7ba54db2ea/multidict-4.6.1.tar.gz";
-        sha256 = "5159c4975931a1a78bf6602bbebaa366747fce0a56cb2111f44789d2c45e379f";
+        url = "https://files.pythonhosted.org/packages/34/68/38290d44ea34dae6d52719f0c94bd09951387cec75e36cdce6805b5f27e9/multidict-4.7.1.tar.gz";
+        sha256 = "d7b6da08538302c5245cd3103f333655ba7f274915f1f5121c4f4b5fbdb3febe";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -569,10 +569,10 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.11";
+      name = "sqlalchemy-1.3.12";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/34/5c/0e1d7ad0ca52544bb12f9cb8d5cc454af45821c92160ffedd38db0a317f6/SQLAlchemy-1.3.11.tar.gz";
-        sha256 = "afa5541e9dea8ad0014251bc9d56171ca3d8b130c9627c6cb3681cff30be3f8a";
+        url = "https://files.pythonhosted.org/packages/17/7f/35879c73859368ad19a952b69ee780aa97fc30350dabd45fb948d6a4e3ea/SQLAlchemy-1.3.12.tar.gz";
+        sha256 = "bfb8f464a5000b567ac1d350b9090cf081180ec1ab4aa87e7bca12dab25320ec";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
