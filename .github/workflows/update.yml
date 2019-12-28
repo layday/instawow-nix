@@ -1,30 +1,36 @@
 name: Update Nix expression
 on:
   schedule:
-  - cron: '0 0 * * *'
+  - cron: 0 0 * * *
   push:
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-    - name: Check-out the master branch of our repo
+    - name: Check-out master branch
       uses: actions/checkout@v1
+    - name: Check-out main repo
+      uses: actions/checkout@v2
       with:
-        submodules: true
+        repository: layday/instawow
+        path: instawow
+        ref: for-nix
     - name: Install Nix
       uses: cachix/install-nix-action@v6
     - name: Install Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: '3.7'
     - name: Install nox
       run: |
         python3.7 -m pip install nox
     - name: Generate Nix expression from PyPI package
       run: |
-        nox -f instawow/noxfile.py -s nixify -- ..
+        nox -f instawow/noxfile.py -s nixify
+      env:
+        INSTAWOW_NIXIFY_DIR: '..'
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v2.4.0
+      uses: stefanzweifel/git-auto-commit-action@v2.5.0
       with:
         commit_message: Update
         branch: master
