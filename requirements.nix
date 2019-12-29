@@ -250,10 +250,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.6.2.1";
+      name = "instawow-1.6.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/aa/0b/a335e508bc991d4caf86c711eb31df332d3770372a53324bf59a90ac0d0e/instawow-1.6.2.1.tar.gz";
-        sha256 = "18b4a56ee0297d008664abead5ed6d7c1a13b400dea64b6f11b417dc28864a0a";
+        url = "https://files.pythonhosted.org/packages/7d/c8/8f64ba82e115fdcd646c88d32d5c30a40be7b06717591b82c3ad2f92a9d6/instawow-1.6.3.tar.gz";
+        sha256 = "201cd453e704713614edec5dfd46e68f0225dc2c96ad0c9f39c0a37add0a7ded";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -335,10 +335,10 @@ let
     };
 
     "lupa" = python.mkDerivation {
-      name = "lupa-1.8";
+      name = "lupa-1.9";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7f/73/b26eb44603dc47e32b9a308e15cdf613aa3eeba073004d11572182e5df92/lupa-1.8.tar.gz";
-        sha256 = "f55781c9ab8fab77aa438481067a72da0b04849e2790a4e80d3c9bc77d7f8e53";
+        url = "https://files.pythonhosted.org/packages/e4/44/85d9a962dd135c74d82edec606691f1f4db664f11fe8393eef4146bb98d7/lupa-1.9.tar.gz";
+        sha256 = "a3e11d806ca02cf72e490ec1974f8b96a14a1091895c9dccebe0b8d52dd82e8e";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -405,10 +405,10 @@ let
     };
 
     "multidict" = python.mkDerivation {
-      name = "multidict-4.7.1";
+      name = "multidict-4.7.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/34/68/38290d44ea34dae6d52719f0c94bd09951387cec75e36cdce6805b5f27e9/multidict-4.7.1.tar.gz";
-        sha256 = "d7b6da08538302c5245cd3103f333655ba7f274915f1f5121c4f4b5fbdb3febe";
+        url = "https://files.pythonhosted.org/packages/ec/1b/a117d6cb4403f2b64633606e3767f65fa8897b7db6efe14391c7b96cf2f6/multidict-4.7.2.tar.gz";
+        sha256 = "d4dafdcfbf0ac80fc5f00603f0ce43e487c654ae34a656e4749f175d9832b1b5";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -442,10 +442,10 @@ let
     };
 
     "pydantic" = python.mkDerivation {
-      name = "pydantic-1.2";
+      name = "pydantic-1.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/50/1c/09c63d7ceff93ce8b3202d631fdaa3eee986bf3719e3902c1c8c79f355d1/pydantic-1.2.tar.gz";
-        sha256 = "da10b034750addbd95a328654d20364c479f4e2e26e0f72933204d61cbc8fa78";
+        url = "https://files.pythonhosted.org/packages/3e/69/b22c0eb3157115e1e3d111f574a6a41552539f1e53b064121ef4e9ac1368/pydantic-1.3.tar.gz";
+        sha256 = "2eab7d548b0e530bf65bee7855ad8164c2f6a889975d5e9c4eefd1e7c98245dc";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
