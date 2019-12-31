@@ -23,7 +23,7 @@ jobs:
         python-version: '3.7'
     - name: Install nox
       run: |
-        python3.7 -m pip install nox
+        python -m pip install nox
     - name: Generate Nix expression from PyPI package
       run: |
         nox -f instawow/noxfile.py -s nixify
@@ -34,5 +34,6 @@ jobs:
       with:
         commit_message: Update
         branch: master
+        file_pattern: requirements*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
