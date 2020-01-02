@@ -518,10 +518,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-43.0.0";
+      name = "setuptools-44.0.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/06/51/8f2aa4b85f2fb394af0d440fc9a35747a1aeab27214f6e6f7d02e3b43719/setuptools-43.0.0.zip";
-        sha256 = "db45ebb4a4b3b95ff0aca3ce5fe1e820ce17be393caf8902c78aa36240e8c378";
+        url = "https://files.pythonhosted.org/packages/b0/f3/44da7482ac6da3f36f68e253cb04de37365b3dba9036a3c70773b778b485/setuptools-44.0.0.zip";
+        sha256 = "e5baf7723e5bb8382fc146e33032b241efc63314211a3a120aaa55d62d2bb008";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
