@@ -1,4 +1,4 @@
-# generated using pypi2nix tool (version: 2.0.2)
+# generated using pypi2nix tool (version: 2.0.3)
 # See more at: https://github.com/nix-community/pypi2nix
 #
 # COMMAND:
@@ -535,14 +535,17 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.3.3";
+      name = "setuptools-scm-3.4.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/83/44/53cad68ce686585d12222e6769682c4bdb9686808d2739671f9175e2938b/setuptools_scm-3.3.3.tar.gz";
-        sha256 = "bd25e1fb5e4d603dcf490f1fde40fb4c595b357795674c3e5cb7f6217ab39ea5";
+        url = "https://files.pythonhosted.org/packages/9c/86/b16c4a1699bea6dfed3099ad67339f3d67c74a14f0ee8f48e0d77e78d42f/setuptools_scm-3.4.0.tar.gz";
+        sha256 = "8b6da340e4b152712d196fcea3a6715f00d11f7dee22e319b036e98787859fb7";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
+      format = "pyproject";
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+        self."wheel"
+      ];
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/pypa/setuptools_scm/";
