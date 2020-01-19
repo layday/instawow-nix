@@ -227,10 +227,10 @@ let
     };
 
     "importlib-metadata" = python.mkDerivation {
-      name = "importlib-metadata-1.3.0";
+      name = "importlib-metadata-1.4.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/cb/bb/7a935a48bf751af244090a7bd558769942cf13a7eba874b8b25538f3db01/importlib_metadata-1.3.0.tar.gz";
-        sha256 = "073a852570f92da5f744a3472af1b61e28e9f78ccf0c9117658dc32b15de7b45";
+        url = "https://files.pythonhosted.org/packages/8c/0e/10e247f40c89ba72b7f2a2104ccf1b65de18f79562ffe11bfb837b711acf/importlib_metadata-1.4.0.tar.gz";
+        sha256 = "f17c015735e1a88296994c0697ecea7e11db24290941983b08c9feb30921e6d8";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -250,10 +250,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.6.4";
+      name = "instawow-1.7.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ee/58/832a33bd7f0a45f1e3d2e5db7b4b81b7439991ef2880287273e1e6d45249/instawow-1.6.4.tar.gz";
-        sha256 = "bdf940da07785e6844193f6327eba095deaff1ab56f8085d78f42eda2f008472";
+        url = "https://files.pythonhosted.org/packages/11/93/5e8ea13a0c9a22ae7259cfced36888ebea805f34a392b106dfb67f8d971a/instawow-1.7.0.tar.gz";
+        sha256 = "efdb3467f5e6cafc7a466abf822f1f1be9b565d56ef0061046956e03c9c00b34";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -265,36 +265,23 @@ let
       propagatedBuildInputs = [
         self."aiohttp"
         self."alembic"
-        self."async-timeout"
-        self."attrs"
-        self."chardet"
         self."click"
         self."fuzzywuzzy"
-        self."idna"
         self."importlib-metadata"
         self."jinja2"
         self."loguru"
         self."lupa"
-        self."mako"
-        self."markupsafe"
-        self."more-itertools"
-        self."multidict"
         self."prompt-toolkit"
         self."pydantic"
-        self."python-dateutil"
-        self."python-editor"
         self."questionary"
-        self."six"
         self."sqlalchemy"
         self."typing-extensions"
-        self."wcwidth"
         self."yarl"
-        self."zipp"
       ];
       meta = with pkgs.stdenv.lib; {
         homepage = "http://github.com/layday/instawow";
         license = "GPL-3.0-or-later";
-        description = "A CLI for managing World of Warcraft add-ons.";
+        description = "CLI for managing World of Warcraft add-ons";
       };
     };
 
@@ -388,10 +375,10 @@ let
     };
 
     "more-itertools" = python.mkDerivation {
-      name = "more-itertools-8.0.2";
+      name = "more-itertools-8.1.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/4e/b2/e9e512cccde6c54bf66a8e5820a2af779eb8235028627002ca90d4f75bea/more-itertools-8.0.2.tar.gz";
-        sha256 = "b84b238cce0d9adad5ed87e745778d20a3f8487d0f0cb8b8a586816c7496458d";
+        url = "https://files.pythonhosted.org/packages/df/8c/c278395367a46c00d28036143fdc6583db8f98622b83875403f16473509b/more-itertools-8.1.0.tar.gz";
+        sha256 = "c468adec578380b6281a114cb8a5db34eb1116277da92d7c46f904f0b52d3288";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -405,19 +392,43 @@ let
     };
 
     "multidict" = python.mkDerivation {
-      name = "multidict-4.7.2";
+      name = "multidict-4.7.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ec/1b/a117d6cb4403f2b64633606e3767f65fa8897b7db6efe14391c7b96cf2f6/multidict-4.7.2.tar.gz";
-        sha256 = "d4dafdcfbf0ac80fc5f00603f0ce43e487c654ae34a656e4749f175d9832b1b5";
+        url = "https://files.pythonhosted.org/packages/b6/22/ae21cedaa0e6d35e84e8ab57700dcf3d4609421ebe113e1aaafc468eec42/multidict-4.7.4.tar.gz";
+        sha256 = "d7d428488c67b09b26928950a395e41cc72bb9c3d5abfe9f0521940ee4f796d4";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
+      format = "pyproject";
+      buildInputs = commonBuildInputs ++ [
+        self."pip"
+        self."setuptools"
+        self."wheel"
+      ];
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/aio-libs/multidict";
         license = licenses.asl20;
         description = "multidict implementation";
+      };
+    };
+
+    "pip" = python.mkDerivation {
+      name = "pip-19.3.1";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz";
+        sha256 = "21207d76c1031e517668898a6b46a9fb1501c7a4710ef5dfd6a40ad9e6757ea7";
+};
+      doCheck = commonDoCheck;
+      format = "pyproject";
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+        self."wheel"
+      ];
+      propagatedBuildInputs = [ ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "https://pip.pypa.io/";
+        license = licenses.mit;
+        description = "The PyPA recommended tool for installing Python packages.";
       };
     };
 
@@ -535,10 +546,10 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.4.0";
+      name = "setuptools-scm-3.4.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/9c/86/b16c4a1699bea6dfed3099ad67339f3d67c74a14f0ee8f48e0d77e78d42f/setuptools_scm-3.4.0.tar.gz";
-        sha256 = "8b6da340e4b152712d196fcea3a6715f00d11f7dee22e319b036e98787859fb7";
+        url = "https://files.pythonhosted.org/packages/9a/29/d8f9b0ddb3b9cb9da4de7fdd5f85bc598f774f22161cf72e5fe47207c8ea/setuptools_scm-3.4.1.tar.gz";
+        sha256 = "6aaa6fbeb81d0899d6f473b0d79efccdd9a28f33192f479d5d2bd92b8eb75090";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -555,10 +566,10 @@ let
     };
 
     "six" = python.mkDerivation {
-      name = "six-1.13.0";
+      name = "six-1.14.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz";
-        sha256 = "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66";
+        url = "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz";
+        sha256 = "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -588,6 +599,23 @@ let
       };
     };
 
+    "toml" = python.mkDerivation {
+      name = "toml-0.10.0";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/b9/19/5cbd78eac8b1783671c40e34bb0fa83133a06d340a38b55c645076d40094/toml-0.10.0.tar.gz";
+        sha256 = "229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c";
+};
+      doCheck = commonDoCheck;
+      format = "setuptools";
+      buildInputs = commonBuildInputs ++ [ ];
+      propagatedBuildInputs = [ ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "https://github.com/uiri/toml";
+        license = licenses.mit;
+        description = "Python Library for Tom's Obvious, Minimal Language";
+      };
+    };
+
     "typing-extensions" = python.mkDerivation {
       name = "typing-extensions-3.7.4.1";
       src = pkgs.fetchurl {
@@ -606,10 +634,10 @@ let
     };
 
     "wcwidth" = python.mkDerivation {
-      name = "wcwidth-0.1.7";
+      name = "wcwidth-0.1.8";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz";
-        sha256 = "3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e";
+        url = "https://files.pythonhosted.org/packages/5e/33/92333eb80be0c96385dee338f30b53e24a8b415d5785e225d789b3f90feb/wcwidth-0.1.8.tar.gz";
+        sha256 = "f28b3e8a6483e5d49e7f8949ac1a78314e740333ae305b4ba5defd3e74fb37a8";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -660,10 +688,10 @@ let
     };
 
     "zipp" = python.mkDerivation {
-      name = "zipp-0.6.0";
+      name = "zipp-1.0.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/57/dd/585d728479d97d25aeeb9aa470d36a4ad8d0ba5610f84e14770128ce6ff7/zipp-0.6.0.tar.gz";
-        sha256 = "3718b1cbcd963c7d4c5511a8240812904164b7f381b647143a89d3b98f9bcd8e";
+        url = "https://files.pythonhosted.org/packages/d4/cd/ef86396dce8910413b6ca1ef31ec09367c47e15fc1a12def2cc8ae134dea/zipp-1.0.0.tar.gz";
+        sha256 = "d38fbe01bbf7a3593a32bc35a9c4453c32bc42b98c377f9bff7e9f8da157786c";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -685,7 +713,7 @@ let
   localOverridesFile = ./requirements_override.nix;
   localOverrides = import localOverridesFile { inherit pkgs python; };
   commonOverrides = [
-        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "db87933d87d9b3943cf636a49f16b76c9ea66db7"; sha256 = "1phiqh72dyg7qhkv15kdg4gjkx8rkywvs41j7liz5faj66ijlpv6"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
+        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "da5a27614ffc963478d8d5caf7c78491e2744750"; sha256 = "10p0l97jjwwi0ld5dpvyn2v2nfxww1sm766131i4363zazzidndm"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
   ];
   paramOverrides = [
     (overrides { inherit pkgs python; })
