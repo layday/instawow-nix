@@ -305,10 +305,10 @@ let
     };
 
     "loguru" = python.mkDerivation {
-      name = "loguru-0.4.0";
+      name = "loguru-0.4.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/1d/85/eb26882a550144b5ae95cd2be1d24794969817fbcca6a66db8089b37df3b/loguru-0.4.0.tar.gz";
-        sha256 = "d5ddf363b7e0e562652f283f74a89bf35601baf16b70f2cd2736a2f8c6638748";
+        url = "https://files.pythonhosted.org/packages/b8/b7/ec749f8f95454d6043900f99d8e6ec48be89f62d861e909c3eb0407c54a7/loguru-0.4.1.tar.gz";
+        sha256 = "a6101fd435ac89ba5205a105a26a6ede9e4ddbb4408a6e167852efca47806d11";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -529,10 +529,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-45.0.0";
+      name = "setuptools-45.1.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/fd/76/3c7f726ed5c582019937f178d7478ce62716b7e8263344f1684cbe11ab3e/setuptools-45.0.0.zip";
-        sha256 = "c46d9c8f2289535457d36c676b541ca78f7dcb736b97d02f50d17f7f15b583cc";
+        url = "https://files.pythonhosted.org/packages/42/3e/2464120172859e5d103e5500315fb5555b1e908c0dacc73d80d35a9480ca/setuptools-45.1.0.zip";
+        sha256 = "91f72d83602a6e5e4a9e4fe296e27185854038d7cbda49dcd7006c4d3b3b89d5";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -546,10 +546,10 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.4.1";
+      name = "setuptools-scm-3.4.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/9a/29/d8f9b0ddb3b9cb9da4de7fdd5f85bc598f774f22161cf72e5fe47207c8ea/setuptools_scm-3.4.1.tar.gz";
-        sha256 = "6aaa6fbeb81d0899d6f473b0d79efccdd9a28f33192f479d5d2bd92b8eb75090";
+        url = "https://files.pythonhosted.org/packages/e0/e4/92594bcbc7c06b1afba1543d4fcdbf71b4d4d7b2e18c512725fbc1ac0a8c/setuptools_scm-3.4.2.tar.gz";
+        sha256 = "88c14b4912dae5c9d1a79900aa4f51f25fba5b318538edbb61c867ab5d5b6da5";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
