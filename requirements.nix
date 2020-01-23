@@ -1,4 +1,4 @@
-# generated using pypi2nix tool (version: 2.0.3)
+# generated using pypi2nix tool (version: 2.0.4)
 # See more at: https://github.com/nix-community/pypi2nix
 #
 # COMMAND:
@@ -100,10 +100,10 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.3.2";
+      name = "alembic-1.3.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/dc/6d/3c1411dfdcf089ec89ce5e2222deb2292f39b6b1a5911222e15af9fe5a92/alembic-1.3.2.tar.gz";
-        sha256 = "3b0cb1948833e062f4048992fbc97ecfaaaac24aaa0d83a1202a99fb58af8c6d";
+        url = "https://files.pythonhosted.org/packages/9d/c9/d4aa3be3511dfd6d86f8f483ce0d9f120258be4aceadc17601843593e2ec/alembic-1.3.3.tar.gz";
+        sha256 = "d412982920653db6e5a44bfd13b1d0db5685cbaaccaf226195749c706e1e862a";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -250,10 +250,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.7.0";
+      name = "instawow-1.7.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/11/93/5e8ea13a0c9a22ae7259cfced36888ebea805f34a392b106dfb67f8d971a/instawow-1.7.0.tar.gz";
-        sha256 = "efdb3467f5e6cafc7a466abf822f1f1be9b565d56ef0061046956e03c9c00b34";
+        url = "https://files.pythonhosted.org/packages/23/7f/f3cab6aab7ce259dbc05eb3bf9ae96693d5a6f585f52ee9fb8a264a3141a/instawow-1.7.1.tar.gz";
+        sha256 = "ddc71da768d269c1976b91785013cfab84c4bf0815dc48aa22e7fb62c695b9c0";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -339,10 +339,10 @@ let
     };
 
     "mako" = python.mkDerivation {
-      name = "mako-1.1.0";
+      name = "mako-1.1.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/b0/3c/8dcd6883d009f7cae0f3157fb53e9afb05a0d3d33b3db1268ec2e6f4a56b/Mako-1.1.0.tar.gz";
-        sha256 = "a36919599a9b7dc5d86a7a8988f23a9a3a3d083070023bab23d64f7f1d1e0a4b";
+        url = "https://files.pythonhosted.org/packages/28/03/329b21f00243fc2d3815399413845dbbfb0745cff38a29d3597e97f8be58/Mako-1.1.1.tar.gz";
+        sha256 = "2984a6733e1d472796ceef37ad48c26f4a984bb18119bb2dbc37a44d8f6e75a4";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -413,10 +413,10 @@ let
     };
 
     "pip" = python.mkDerivation {
-      name = "pip-19.3.1";
+      name = "pip-20.0.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz";
-        sha256 = "21207d76c1031e517668898a6b46a9fb1501c7a4710ef5dfd6a40ad9e6757ea7";
+        url = "https://files.pythonhosted.org/packages/28/af/2c76c8aa46ccdf7578b83d97a11a2d1858794d4be4a1610ade0d30182e8b/pip-20.0.1.tar.gz";
+        sha256 = "3cebbac2a1502e09265f94e5717408339de846b3c0f0ed086d7b817df9cab822";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -546,10 +546,10 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.4.2";
+      name = "setuptools-scm-3.4.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/e0/e4/92594bcbc7c06b1afba1543d4fcdbf71b4d4d7b2e18c512725fbc1ac0a8c/setuptools_scm-3.4.2.tar.gz";
-        sha256 = "88c14b4912dae5c9d1a79900aa4f51f25fba5b318538edbb61c867ab5d5b6da5";
+        url = "https://files.pythonhosted.org/packages/fe/bd/bc2fe0b14ce234bb5e2af5f3b574c5a8ef1b7845bfa41e7cf69a78627ec8/setuptools_scm-3.4.3.tar.gz";
+        sha256 = "26b8a108783cd88f4b15ff1f0f347d6b476db25d0c226159b835d713f9487320";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -583,10 +583,10 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.12";
+      name = "sqlalchemy-1.3.13";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/17/7f/35879c73859368ad19a952b69ee780aa97fc30350dabd45fb948d6a4e3ea/SQLAlchemy-1.3.12.tar.gz";
-        sha256 = "bfb8f464a5000b567ac1d350b9090cf081180ec1ab4aa87e7bca12dab25320ec";
+        url = "https://files.pythonhosted.org/packages/af/47/35edeb0f86c0b44934c05d961c893e223ef27e79e1f53b5e6f14820ff553/SQLAlchemy-1.3.13.tar.gz";
+        sha256 = "64a7b71846db6423807e96820993fa12a03b89127d278290ca25c0b11ed7b4fb";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -688,10 +688,10 @@ let
     };
 
     "zipp" = python.mkDerivation {
-      name = "zipp-1.0.0";
+      name = "zipp-2.0.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/d4/cd/ef86396dce8910413b6ca1ef31ec09367c47e15fc1a12def2cc8ae134dea/zipp-1.0.0.tar.gz";
-        sha256 = "d38fbe01bbf7a3593a32bc35a9c4453c32bc42b98c377f9bff7e9f8da157786c";
+        url = "https://files.pythonhosted.org/packages/69/d2/daa94177e934b0b1b0780f5c856c41c248a88b2f43c046ae23afb0116ec0/zipp-2.0.1.tar.gz";
+        sha256 = "b338014b9bc7102ca69e0fb96ed07215a8954d2989bc5d83658494ab2ba634af";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
