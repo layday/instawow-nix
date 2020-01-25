@@ -250,10 +250,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.7.1";
+      name = "instawow-1.7.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/23/7f/f3cab6aab7ce259dbc05eb3bf9ae96693d5a6f585f52ee9fb8a264a3141a/instawow-1.7.1.tar.gz";
-        sha256 = "ddc71da768d269c1976b91785013cfab84c4bf0815dc48aa22e7fb62c695b9c0";
+        url = "https://files.pythonhosted.org/packages/a6/0d/1fd7b14fdec081810207c7d3e6a9cb059cb0da3e930dffbcf17339ad66af/instawow-1.7.2.tar.gz";
+        sha256 = "d4c1ab362550bb66aef2256b71518a36777b48d11ebe7b49f12291ca69630f91";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
