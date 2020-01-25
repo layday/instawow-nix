@@ -413,10 +413,10 @@ let
     };
 
     "pip" = python.mkDerivation {
-      name = "pip-20.0.1";
+      name = "pip-20.0.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/28/af/2c76c8aa46ccdf7578b83d97a11a2d1858794d4be4a1610ade0d30182e8b/pip-20.0.1.tar.gz";
-        sha256 = "3cebbac2a1502e09265f94e5717408339de846b3c0f0ed086d7b817df9cab822";
+        url = "https://files.pythonhosted.org/packages/8e/76/66066b7bc71817238924c7e4b448abdb17eb0c92d645769c223f9ace478f/pip-20.0.2.tar.gz";
+        sha256 = "7db0c8ea4c7ea51c8049640e8e6e7fde949de672bfa4949920675563a5a6967f";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -453,10 +453,10 @@ let
     };
 
     "pydantic" = python.mkDerivation {
-      name = "pydantic-1.3";
+      name = "pydantic-1.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/3e/69/b22c0eb3157115e1e3d111f574a6a41552539f1e53b064121ef4e9ac1368/pydantic-1.3.tar.gz";
-        sha256 = "2eab7d548b0e530bf65bee7855ad8164c2f6a889975d5e9c4eefd1e7c98245dc";
+        url = "https://files.pythonhosted.org/packages/0d/0f/5dd883399fca772c441f4fd8db85320fa7a912fa2f917f0cee1f681f9a93/pydantic-1.4.tar.gz";
+        sha256 = "f17ec336e64d4583311249fb179528e9a2c27c8a2eaf590ec6ec2c6dece7cb3f";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
