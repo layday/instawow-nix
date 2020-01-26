@@ -374,23 +374,6 @@ let
       };
     };
 
-    "more-itertools" = python.mkDerivation {
-      name = "more-itertools-8.1.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/df/8c/c278395367a46c00d28036143fdc6583db8f98622b83875403f16473509b/more-itertools-8.1.0.tar.gz";
-        sha256 = "c468adec578380b6281a114cb8a5db34eb1116277da92d7c46f904f0b52d3288";
-};
-      doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/erikrose/more-itertools";
-        license = licenses.mit;
-        description = "More routines for operating on iterables, beyond itertools";
-      };
-    };
-
     "multidict" = python.mkDerivation {
       name = "multidict-4.7.4";
       src = pkgs.fetchurl {
@@ -688,10 +671,10 @@ let
     };
 
     "zipp" = python.mkDerivation {
-      name = "zipp-2.0.1";
+      name = "zipp-2.1.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/69/d2/daa94177e934b0b1b0780f5c856c41c248a88b2f43c046ae23afb0116ec0/zipp-2.0.1.tar.gz";
-        sha256 = "b338014b9bc7102ca69e0fb96ed07215a8954d2989bc5d83658494ab2ba634af";
+        url = "https://files.pythonhosted.org/packages/11/b5/89f3ab6d45b2709863761bab58c574b2344ef215749abb5407818c21c9ca/zipp-2.1.0.tar.gz";
+        sha256 = "feae2f18633c32fc71f2de629bfb3bd3c9325cd4419642b1f1da42ee488d9b98";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -700,9 +683,7 @@ let
         self."setuptools-scm"
         self."wheel"
       ];
-      propagatedBuildInputs = [
-        self."more-itertools"
-      ];
+      propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/jaraco/zipp";
         license = licenses.mit;
@@ -713,7 +694,7 @@ let
   localOverridesFile = ./requirements_override.nix;
   localOverrides = import localOverridesFile { inherit pkgs python; };
   commonOverrides = [
-        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "da5a27614ffc963478d8d5caf7c78491e2744750"; sha256 = "10p0l97jjwwi0ld5dpvyn2v2nfxww1sm766131i4363zazzidndm"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
+        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "ebc21a64505989717dc395ad92f0a4d7021c44bc"; sha256 = "1p1bqm80anxsnh2k26y0f066z3zpngwxpff1jldzzkbhvw8zw77i"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
   ];
   paramOverrides = [
     (overrides { inherit pkgs python; })

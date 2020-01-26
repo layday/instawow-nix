@@ -13,7 +13,6 @@ loguru==0.4.1
 lupa==1.9
 Mako==1.1.1
 MarkupSafe==1.1.1
-more-itertools==8.1.0
 multidict==4.7.4
 prompt-toolkit==2.0.10
 pydantic==1.4
@@ -27,4 +26,4 @@ toml==0.10.0
 typing-extensions==3.7.4.1
 wcwidth==0.1.8
 yarl==1.4.2
-zipp==2.0.1
+zipp==2.1.0
