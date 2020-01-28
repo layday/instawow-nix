@@ -286,10 +286,10 @@ let
     };
 
     "jinja2" = python.mkDerivation {
-      name = "jinja2-2.10.3";
+      name = "jinja2-2.11.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7b/db/1d037ccd626d05a7a47a1b81ea73775614af83c2b3e53d86a0bb41d8d799/Jinja2-2.10.3.tar.gz";
-        sha256 = "9fe95f19286cfefaa917656583d020be14e7859c6b0252588391e47db34527de";
+        url = "https://files.pythonhosted.org/packages/30/4b/898001ad08a1c51ffdcfadb028e5654a78484d0a3669d72d56f6ae5472bb/Jinja2-2.11.0.tar.gz";
+        sha256 = "d6609ae5ec3d56212ca7d802eda654eaf2310000816ce815361041465b108be4";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -634,19 +634,21 @@ let
     };
 
     "wheel" = python.mkDerivation {
-      name = "wheel-0.33.6";
+      name = "wheel-0.34.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/59/b0/11710a598e1e148fb7cbf9220fd2a0b82c98e94efbdecb299cb25e7f0b39/wheel-0.33.6.tar.gz";
-        sha256 = "10c9da68765315ed98850f8e048347c3eb06dd81822dc2ab1d4fde9dc9702646";
+        url = "https://files.pythonhosted.org/packages/f9/85/120a5ad1565398efb1184eacaa597e925abbf8fff8cc748877add71257f1/wheel-0.34.1.tar.gz";
+        sha256 = "664b9c5033ee7cd5aa6b355bc8a4a5915eadb7612e7b0acab1aa71f005457107";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
+      buildInputs = commonBuildInputs ++ [
+        self."setuptools"
+      ];
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/pypa/wheel";
         license = licenses.mit;
-        description = "A built-package format for Python.";
+        description = "A built-package format for Python";
       };
     };
 
