@@ -286,10 +286,10 @@ let
     };
 
     "jinja2" = python.mkDerivation {
-      name = "jinja2-2.11.0";
+      name = "jinja2-2.11.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/30/4b/898001ad08a1c51ffdcfadb028e5654a78484d0a3669d72d56f6ae5472bb/Jinja2-2.11.0.tar.gz";
-        sha256 = "d6609ae5ec3d56212ca7d802eda654eaf2310000816ce815361041465b108be4";
+        url = "https://files.pythonhosted.org/packages/d8/03/e491f423379ea14bb3a02a5238507f7d446de639b623187bccc111fbecdf/Jinja2-2.11.1.tar.gz";
+        sha256 = "93187ffbc7808079673ef52771baa950426fd664d3aad1d0fa3e95644360e250";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -634,10 +634,10 @@ let
     };
 
     "wheel" = python.mkDerivation {
-      name = "wheel-0.34.1";
+      name = "wheel-0.34.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/f9/85/120a5ad1565398efb1184eacaa597e925abbf8fff8cc748877add71257f1/wheel-0.34.1.tar.gz";
-        sha256 = "664b9c5033ee7cd5aa6b355bc8a4a5915eadb7612e7b0acab1aa71f005457107";
+        url = "https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz";
+        sha256 = "8788e9155fe14f54164c1b9eb0a319d98ef02c160725587ad60f14ddc57b6f96";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
