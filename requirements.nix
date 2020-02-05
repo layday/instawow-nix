@@ -100,10 +100,10 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.3.3";
+      name = "alembic-1.4.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/9d/c9/d4aa3be3511dfd6d86f8f483ce0d9f120258be4aceadc17601843593e2ec/alembic-1.3.3.tar.gz";
-        sha256 = "d412982920653db6e5a44bfd13b1d0db5685cbaaccaf226195749c706e1e862a";
+        url = "https://files.pythonhosted.org/packages/be/4e/9a6044bb78e8cb6d5846c07f8d3e976b7d5db845e5bd8c82c57f3ca91b0e/alembic-1.4.0.tar.gz";
+        sha256 = "2df2519a5b002f881517693b95626905a39c5faf4b5a1f94de4f1441095d1d26";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
