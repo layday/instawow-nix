@@ -673,10 +673,10 @@ let
     };
 
     "zipp" = python.mkDerivation {
-      name = "zipp-2.1.0";
+      name = "zipp-2.2.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/11/b5/89f3ab6d45b2709863761bab58c574b2344ef215749abb5407818c21c9ca/zipp-2.1.0.tar.gz";
-        sha256 = "feae2f18633c32fc71f2de629bfb3bd3c9325cd4419642b1f1da42ee488d9b98";
+        url = "https://files.pythonhosted.org/packages/60/85/668bca4a9ef474ca634c993e768f12bd99af1f06bb90bb2655bc538a967e/zipp-2.2.0.tar.gz";
+        sha256 = "5c56e330306215cd3553342cfafc73dda2c60792384117893f3a83f8a1209f50";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
