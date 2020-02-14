@@ -193,10 +193,10 @@ let
     };
 
     "fuzzywuzzy" = python.mkDerivation {
-      name = "fuzzywuzzy-0.17.0";
+      name = "fuzzywuzzy-0.18.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/81/54/586e9f34401dc7f5248589765bb67d49b837e2f309f25a33e82e896cba0a/fuzzywuzzy-0.17.0.tar.gz";
-        sha256 = "6f49de47db00e1c71d40ad16da42284ac357936fa9b66bea1df63fed07122d62";
+        url = "https://files.pythonhosted.org/packages/11/4b/0a002eea91be6048a2b5d53c5f1b4dafd57ba2e36eea961d05086d7c28ce/fuzzywuzzy-0.18.0.tar.gz";
+        sha256 = "45016e92264780e58972dca1b3d939ac864b78437422beecebb3095f8efd00e8";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -204,7 +204,7 @@ let
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/seatgeek/fuzzywuzzy";
-        license = "GPL";
+        license = licenses.gpl2;
         description = "Fuzzy string matching in python";
       };
     };
@@ -529,10 +529,10 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.4.3";
+      name = "setuptools-scm-3.5.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/fe/bd/bc2fe0b14ce234bb5e2af5f3b574c5a8ef1b7845bfa41e7cf69a78627ec8/setuptools_scm-3.4.3.tar.gz";
-        sha256 = "26b8a108783cd88f4b15ff1f0f347d6b476db25d0c226159b835d713f9487320";
+        url = "https://files.pythonhosted.org/packages/b2/f7/60a645aae001a2e06cf4b8db2fba9d9f36b8fd378f10647e3e218b61b74b/setuptools_scm-3.5.0.tar.gz";
+        sha256 = "5bdf21a05792903cafe7ae0c9501182ab52497614fa6b1750d9dbae7b60c1a87";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
