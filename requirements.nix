@@ -210,10 +210,10 @@ let
     };
 
     "idna" = python.mkDerivation {
-      name = "idna-2.8";
+      name = "idna-2.9";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz";
-        sha256 = "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407";
+        url = "https://files.pythonhosted.org/packages/cb/19/57503b5de719ee45e83472f339f617b0c01ad75cba44aba1e4c97c2b0abd/idna-2.9.tar.gz";
+        sha256 = "7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -673,10 +673,10 @@ let
     };
 
     "zipp" = python.mkDerivation {
-      name = "zipp-2.2.0";
+      name = "zipp-3.0.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/60/85/668bca4a9ef474ca634c993e768f12bd99af1f06bb90bb2655bc538a967e/zipp-2.2.0.tar.gz";
-        sha256 = "5c56e330306215cd3553342cfafc73dda2c60792384117893f3a83f8a1209f50";
+        url = "https://files.pythonhosted.org/packages/42/09/bb2a28216f9572da61a2c56c6d5bf6d8c011371d8268f42a9ca5a4cbaf40/zipp-3.0.0.tar.gz";
+        sha256 = "7c0f8e91abc0dc07a5068f315c52cb30c66bfbc581e5b50704c8a2f6ebae794a";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -696,7 +696,7 @@ let
   localOverridesFile = ./requirements_override.nix;
   localOverrides = import localOverridesFile { inherit pkgs python; };
   commonOverrides = [
-        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "fbbcadd9e5fedade659ba2585893d3a8cbba8e56"; sha256 = "1fmqib6j08lswfw0agbgy1hdib3rfmrzx2x5zyzrqbkvc80a734b"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
+        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "5e5499a865934cca82a4ab8322ec68bee683b77d"; sha256 = "0xc33x7p643d4046qljx44ivbgv4iijdapwfr6n1wxl281gi2b6k"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
   ];
   paramOverrides = [
     (overrides { inherit pkgs python; })

@@ -5,7 +5,7 @@ attrs==19.3.0
 chardet==3.0.4
 Click==7.0
 fuzzywuzzy==0.18.0
-idna==2.8
+idna==2.9
 importlib-metadata==1.5.0
 instawow==1.7.2
 Jinja2==2.11.1
@@ -26,4 +26,4 @@ toml==0.10.0
 typing-extensions==3.7.4.1
 wcwidth==0.1.8
 yarl==1.4.2
-zipp==2.2.0
+zipp==3.0.0
