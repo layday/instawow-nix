@@ -100,10 +100,10 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.4.0";
+      name = "alembic-1.4.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/be/4e/9a6044bb78e8cb6d5846c07f8d3e976b7d5db845e5bd8c82c57f3ca91b0e/alembic-1.4.0.tar.gz";
-        sha256 = "2df2519a5b002f881517693b95626905a39c5faf4b5a1f94de4f1441095d1d26";
+        url = "https://files.pythonhosted.org/packages/e0/e9/359dbb77c35c419df0aedeb1d53e71e7e3f438ff64a8fdb048c907404de3/alembic-1.4.1.tar.gz";
+        sha256 = "791a5686953c4b366d3228c5377196db2f534475bb38d26f70eb69668efd9028";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -339,10 +339,10 @@ let
     };
 
     "mako" = python.mkDerivation {
-      name = "mako-1.1.1";
+      name = "mako-1.1.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/28/03/329b21f00243fc2d3815399413845dbbfb0745cff38a29d3597e97f8be58/Mako-1.1.1.tar.gz";
-        sha256 = "2984a6733e1d472796ceef37ad48c26f4a984bb18119bb2dbc37a44d8f6e75a4";
+        url = "https://files.pythonhosted.org/packages/42/64/fc7c506d14d8b6ed363e7798ffec2dfe4ba21e14dda4cfab99f4430cba3a/Mako-1.1.2.tar.gz";
+        sha256 = "3139c5d64aa5d175dbafb95027057128b5fbd05a40c53999f3905ceb53366d9d";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
