@@ -26,4 +26,4 @@ toml==0.10.0
 typing-extensions==3.7.4.1
 wcwidth==0.1.8
 yarl==1.4.2
-zipp==3.0.0
+zipp==3.1.0
