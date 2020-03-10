@@ -176,10 +176,10 @@ let
     };
 
     "click" = python.mkDerivation {
-      name = "click-7.0";
+      name = "click-7.1.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/f8/5c/f60e9d8a1e77005f664b76ff8aeaee5bc05d0a91798afd7f53fc998dbc47/Click-7.0.tar.gz";
-        sha256 = "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7";
+        url = "https://files.pythonhosted.org/packages/4e/ab/5d6bc3b697154018ef196f5b17d958fac3854e2efbc39ea07a284d4a6a9b/click-7.1.1.tar.gz";
+        sha256 = "8a18b4ea89d8820c5d0c7da8a64b2c324b4dabb695804dbfea19b9be9d88c0cc";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
