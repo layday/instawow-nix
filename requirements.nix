@@ -566,13 +566,13 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.13";
+      name = "sqlalchemy-1.3.14";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/af/47/35edeb0f86c0b44934c05d961c893e223ef27e79e1f53b5e6f14820ff553/SQLAlchemy-1.3.13.tar.gz";
-        sha256 = "64a7b71846db6423807e96820993fa12a03b89127d278290ca25c0b11ed7b4fb";
+        url = "https://files.pythonhosted.org/packages/f5/d8/3cc1c814b29c6ac667200e19e9cf1879479f6ad561595fa313bcd99f3e0f/SQLAlchemy-1.3.14.tar.gz";
+        sha256 = "b92d2de62e43499d85b1780274d1b562e5159c7996f6f04a9bb46cf681ced45f";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
+      format = "pyproject";
       buildInputs = commonBuildInputs ++ [ ];
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
