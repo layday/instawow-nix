@@ -100,13 +100,13 @@ let
     };
 
     "alembic" = python.mkDerivation {
-      name = "alembic-1.4.1";
+      name = "alembic-1.4.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/e0/e9/359dbb77c35c419df0aedeb1d53e71e7e3f438ff64a8fdb048c907404de3/alembic-1.4.1.tar.gz";
-        sha256 = "791a5686953c4b366d3228c5377196db2f534475bb38d26f70eb69668efd9028";
+        url = "https://files.pythonhosted.org/packages/60/1e/cabc75a189de0fbb2841d0975243e59bde8b7822bacbb95008ac6fe9ad47/alembic-1.4.2.tar.gz";
+        sha256 = "035ab00497217628bf5d0be82d664d8713ab13d37b630084da8e1f98facf4dbf";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
+      format = "pyproject";
       buildInputs = commonBuildInputs ++ [ ];
       propagatedBuildInputs = [
         self."mako"
