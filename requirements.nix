@@ -227,10 +227,10 @@ let
     };
 
     "importlib-metadata" = python.mkDerivation {
-      name = "importlib-metadata-1.5.0";
+      name = "importlib-metadata-1.5.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/0d/e4/638f3bde506b86f62235c595073066e7b8472fc9ee2b8c6491347f31d726/importlib_metadata-1.5.0.tar.gz";
-        sha256 = "06f5b3a99029c7134207dd882428a66992a9de2bef7c2b699b5641f9886c3302";
+        url = "https://files.pythonhosted.org/packages/79/8e/b44fd553b6f1c4458fb1d62672fd774705684102c835c89f5325a0b602a1/importlib_metadata-1.5.1.tar.gz";
+        sha256 = "dd381cddc02a58a23667ef675164ad70848d82966d3a8fddea96dcfb51064803";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -512,10 +512,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-46.1.1";
+      name = "setuptools-46.1.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/bb/e7/28d295e0b3f3ddfea42843fb8528918c84cdaf26153242fac5ca6a212622/setuptools-46.1.1.zip";
-        sha256 = "7416e775d09a98aa0422fbe367d15ec0904e4f5aa01043e35bbcb98fa53038de";
+        url = "https://files.pythonhosted.org/packages/b5/96/af1686ea8c1e503f4a81223d4a3410e7587fd52df03083de24161d0df7d4/setuptools-46.1.3.zip";
+        sha256 = "795e0475ba6cd7fa082b1ee6e90d552209995627a2a227a47c6ea93282f4bfb1";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
