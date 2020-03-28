@@ -227,10 +227,10 @@ let
     };
 
     "importlib-metadata" = python.mkDerivation {
-      name = "importlib-metadata-1.5.2";
+      name = "importlib-metadata-1.6.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/d7/cd/3b1dffa46b19dac269d586b9d45090588a8bd7a5741602a369d45e1bdf65/importlib_metadata-1.5.2.tar.gz";
-        sha256 = "dfc83688553a91a786c6c91eeb5f3b1d31f24d71877bbd94ecbf5484e57690a2";
+        url = "https://files.pythonhosted.org/packages/b4/1b/baab42e3cd64c9d5caac25a9d6c054f8324cdc38975a44d600569f1f7158/importlib_metadata-1.6.0.tar.gz";
+        sha256 = "34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
