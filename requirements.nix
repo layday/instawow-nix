@@ -286,10 +286,10 @@ let
     };
 
     "jinja2" = python.mkDerivation {
-      name = "jinja2-2.11.1";
+      name = "jinja2-2.11.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/d8/03/e491f423379ea14bb3a02a5238507f7d446de639b623187bccc111fbecdf/Jinja2-2.11.1.tar.gz";
-        sha256 = "93187ffbc7808079673ef52771baa950426fd664d3aad1d0fa3e95644360e250";
+        url = "https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz";
+        sha256 = "89aab215427ef59c34ad58735269eb58b1a5808103067f7bb9d5836c651b3bb0";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
