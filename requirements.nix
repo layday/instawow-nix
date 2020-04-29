@@ -176,10 +176,10 @@ let
     };
 
     "click" = python.mkDerivation {
-      name = "click-7.1.1";
+      name = "click-7.1.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/4e/ab/5d6bc3b697154018ef196f5b17d958fac3854e2efbc39ea07a284d4a6a9b/click-7.1.1.tar.gz";
-        sha256 = "8a18b4ea89d8820c5d0c7da8a64b2c324b4dabb695804dbfea19b9be9d88c0cc";
+        url = "https://files.pythonhosted.org/packages/27/6f/be940c8b1f1d69daceeb0032fee6c34d7bd70e3e649ccac0951500b4720e/click-7.1.2.tar.gz";
+        sha256 = "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -189,23 +189,6 @@ let
         homepage = "https://palletsprojects.com/p/click/";
         license = licenses.bsdOriginal;
         description = "Composable command line interface toolkit";
-      };
-    };
-
-    "fuzzywuzzy" = python.mkDerivation {
-      name = "fuzzywuzzy-0.18.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/11/4b/0a002eea91be6048a2b5d53c5f1b4dafd57ba2e36eea961d05086d7c28ce/fuzzywuzzy-0.18.0.tar.gz";
-        sha256 = "45016e92264780e58972dca1b3d939ac864b78437422beecebb3095f8efd00e8";
-};
-      doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/seatgeek/fuzzywuzzy";
-        license = licenses.gpl2;
-        description = "Fuzzy string matching in python";
       };
     };
 
@@ -226,34 +209,11 @@ let
       };
     };
 
-    "importlib-metadata" = python.mkDerivation {
-      name = "importlib-metadata-1.6.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/b4/1b/baab42e3cd64c9d5caac25a9d6c054f8324cdc38975a44d600569f1f7158/importlib_metadata-1.6.0.tar.gz";
-        sha256 = "34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e";
-};
-      doCheck = commonDoCheck;
-      format = "pyproject";
-      buildInputs = commonBuildInputs ++ [
-        self."setuptools"
-        self."setuptools-scm"
-        self."wheel"
-      ];
-      propagatedBuildInputs = [
-        self."zipp"
-      ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "http://importlib-metadata.readthedocs.io/";
-        license = licenses.asl20;
-        description = "Read metadata from Python packages";
-      };
-    };
-
     "instawow" = python.mkDerivation {
-      name = "instawow-1.7.2";
+      name = "instawow-1.8.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/a6/0d/1fd7b14fdec081810207c7d3e6a9cb059cb0da3e930dffbcf17339ad66af/instawow-1.7.2.tar.gz";
-        sha256 = "d4c1ab362550bb66aef2256b71518a36777b48d11ebe7b49f12291ca69630f91";
+        url = "https://files.pythonhosted.org/packages/37/73/ff08b70a5978b990863edd19c9c6fb6333584baa38b0634608d96a7eab14/instawow-1.8.2.tar.gz";
+        sha256 = "072a6b9c7e73350105e20201130fb5b4b96791fdebebc34d921198a8aa4ab5c9";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -266,14 +226,13 @@ let
         self."aiohttp"
         self."alembic"
         self."click"
-        self."fuzzywuzzy"
-        self."importlib-metadata"
+        self."jellyfish"
         self."jinja2"
         self."loguru"
-        self."lupa"
         self."prompt-toolkit"
         self."pydantic"
         self."questionary"
+        self."slpp"
         self."sqlalchemy"
         self."typing-extensions"
         self."yarl"
@@ -282,6 +241,23 @@ let
         homepage = "http://github.com/layday/instawow";
         license = "GPL-3.0-or-later";
         description = "CLI for managing World of Warcraft add-ons";
+      };
+    };
+
+    "jellyfish" = python.mkDerivation {
+      name = "jellyfish-0.7.2";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/3f/80/bcacc7affb47be7279d7d35225e1a932416ed051b315a7f9df20acf04cbe/jellyfish-0.7.2.tar.gz";
+        sha256 = "cb09c50d7e2bb7b926fc7654762bc81f9c629e0c92ae7137bf22b34f39515286";
+};
+      doCheck = commonDoCheck;
+      format = "setuptools";
+      buildInputs = commonBuildInputs ++ [ ];
+      propagatedBuildInputs = [ ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "http://github.com/jamesturk/jellyfish";
+        license = licenses.bsdOriginal;
+        description = "a library for doing approximate and phonetic matching of strings.";
       };
     };
 
@@ -318,23 +294,6 @@ let
         homepage = "https://github.com/Delgan/loguru";
         license = licenses.mit;
         description = "Python logging made (stupidly) simple";
-      };
-    };
-
-    "lupa" = python.mkDerivation {
-      name = "lupa-1.9";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/e4/44/85d9a962dd135c74d82edec606691f1f4db664f11fe8393eef4146bb98d7/lupa-1.9.tar.gz";
-        sha256 = "a3e11d806ca02cf72e490ec1974f8b96a14a1091895c9dccebe0b8d52dd82e8e";
-};
-      doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/scoder/lupa";
-        license = licenses.mit;
-        description = "Python wrapper around Lua and LuaJIT";
       };
     };
 
@@ -396,10 +355,10 @@ let
     };
 
     "pip" = python.mkDerivation {
-      name = "pip-20.0.2";
+      name = "pip-20.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/8e/76/66066b7bc71817238924c7e4b448abdb17eb0c92d645769c223f9ace478f/pip-20.0.2.tar.gz";
-        sha256 = "7db0c8ea4c7ea51c8049640e8e6e7fde949de672bfa4949920675563a5a6967f";
+        url = "https://files.pythonhosted.org/packages/d1/05/059c78cd5d740d2299266ffa15514dad6692d4694df571bf168e2cdd98fb/pip-20.1.tar.gz";
+        sha256 = "572c0f25eca7c87217b21f6945b7192744103b18f4e4b16b8a83b227a811e192";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -416,30 +375,29 @@ let
     };
 
     "prompt-toolkit" = python.mkDerivation {
-      name = "prompt-toolkit-2.0.10";
+      name = "prompt-toolkit-3.0.5";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/0c/37/7ad3bf3c6dbe96facf9927ddf066fdafa0f86766237cff32c3c7355d3b7c/prompt_toolkit-2.0.10.tar.gz";
-        sha256 = "f15af68f66e664eaa559d4ac8a928111eebd5feda0c11738b5998045224829db";
+        url = "https://files.pythonhosted.org/packages/69/19/3aa4bf17e1cbbdfe934eb3d5b394ae9a0a7fb23594a2ff27e0fdaf8b4c59/prompt_toolkit-3.0.5.tar.gz";
+        sha256 = "563d1a4140b63ff9dd587bda9557cffb2fe73650205ab6f4383092fb882e7dc8";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
+      format = "pyproject";
       buildInputs = commonBuildInputs ++ [ ];
       propagatedBuildInputs = [
-        self."six"
         self."wcwidth"
       ];
       meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/jonathanslenders/python-prompt-toolkit";
+        homepage = "https://github.com/prompt-toolkit/python-prompt-toolkit";
         license = licenses.bsdOriginal;
         description = "Library for building powerful interactive command lines in Python";
       };
     };
 
     "pydantic" = python.mkDerivation {
-      name = "pydantic-1.4";
+      name = "pydantic-1.5.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/0d/0f/5dd883399fca772c441f4fd8db85320fa7a912fa2f917f0cee1f681f9a93/pydantic-1.4.tar.gz";
-        sha256 = "f17ec336e64d4583311249fb179528e9a2c27c8a2eaf590ec6ec2c6dece7cb3f";
+        url = "https://files.pythonhosted.org/packages/97/24/f8e05f16433b3b5332b3e2cf9b4625692c09432c7a18aa1d735fecb80904/pydantic-1.5.1.tar.gz";
+        sha256 = "f0018613c7a0d19df3240c2a913849786f21b6539b9f23d85ce4067489dfacfa";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -493,13 +451,13 @@ let
     };
 
     "questionary" = python.mkDerivation {
-      name = "questionary-1.3.0";
+      name = "questionary-1.5.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/05/c7/21f443dc9730c7f9d7c9556e34ea5bedcb28b32a75a765336005eda10763/questionary-1.3.0.tar.gz";
-        sha256 = "867c6ef08a139eacc509502292dcc764cf95abbcfcb0ffdea29df5782434cb64";
+        url = "https://files.pythonhosted.org/packages/9e/94/d92feac9a32fee5e7ca63b6e51fbff1d2ec83daabe7f1fe8b9845826b77e/questionary-1.5.2.tar.gz";
+        sha256 = "f6e41e36b6c86fe0c3ff12a30c6c6a4e80129efba5ad0a115d71fd5df119c726";
 };
       doCheck = commonDoCheck;
-      format = "setuptools";
+      format = "pyproject";
       buildInputs = commonBuildInputs ++ [ ];
       propagatedBuildInputs = [
         self."prompt-toolkit"
@@ -562,6 +520,25 @@ let
         homepage = "https://github.com/benjaminp/six";
         license = licenses.mit;
         description = "Python 2 and 3 compatibility utilities";
+      };
+    };
+
+    "slpp" = python.mkDerivation {
+      name = "slpp-1.2.1";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/02/38/2d004dcfb4fb9e3b0e677808d1ca9b7c3835ef0ba4d08df357cd00d79807/SLPP-1.2.1.tar.gz";
+        sha256 = "81cdc8a409b0cd727ab1485b7727c0623a372f6cfe1dcdc0e82296376acb4d0c";
+};
+      doCheck = commonDoCheck;
+      format = "setuptools";
+      buildInputs = commonBuildInputs ++ [ ];
+      propagatedBuildInputs = [
+        self."six"
+      ];
+      meta = with pkgs.stdenv.lib; {
+        homepage = "https://github.com/SirAnthony/slpp";
+        license = licenses.mit;
+        description = "SLPP is a simple lua-python data structures parser";
       };
     };
 
@@ -669,27 +646,6 @@ let
         homepage = "https://github.com/aio-libs/yarl/";
         license = licenses.asl20;
         description = "Yet another URL library";
-      };
-    };
-
-    "zipp" = python.mkDerivation {
-      name = "zipp-3.1.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ce/8c/2c5f7dc1b418f659d36c04dec9446612fc7b45c8095cc7369dd772513055/zipp-3.1.0.tar.gz";
-        sha256 = "c599e4d75c98f6798c509911d08a22e6c021d074469042177c8c86fb92eefd96";
-};
-      doCheck = commonDoCheck;
-      format = "pyproject";
-      buildInputs = commonBuildInputs ++ [
-        self."setuptools"
-        self."setuptools-scm"
-        self."wheel"
-      ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/jaraco/zipp";
-        license = licenses.mit;
-        description = "Backport of pathlib-compatible object wrapper for zip files";
       };
     };
   };
