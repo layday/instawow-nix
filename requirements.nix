@@ -470,10 +470,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-46.2.0";
+      name = "setuptools-46.3.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/96/42/5939499f45c1bfd1a8f61d031d28eed988158f957fe3bec99be2f11500b4/setuptools-46.2.0.zip";
-        sha256 = "4df58bdc68f6c1d3527f24b89eaf09aaa977e0ed639893f485f75a9821178ec6";
+        url = "https://files.pythonhosted.org/packages/68/91/cc0107f3b8aa90968d11ea3334d89d5c63a48b31236f40a80373cc3aec74/setuptools-46.3.0.zip";
+        sha256 = "b5900faa2c6653ed86448a44a2b0455cc25c613928bf8b0f0c92d9a558e79cf3";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -543,10 +543,10 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.16";
+      name = "sqlalchemy-1.3.17";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7f/4b/adfb1f03da7f50db054a5b728d32dbfae8937754cfa159efa0216a3758d1/SQLAlchemy-1.3.16.tar.gz";
-        sha256 = "7224e126c00b8178dfd227bc337ba5e754b197a3867d33b9f30dc0208f773d70";
+        url = "https://files.pythonhosted.org/packages/84/f4/5a61726869da51f37f643ea92bfa440e32eb182bdc1a1c7cfc9504930a95/SQLAlchemy-1.3.17.tar.gz";
+        sha256 = "156a27548ba4e1fed944ff9fcdc150633e61d350d673ae7baaf6c25c04ac1f71";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
