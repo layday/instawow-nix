@@ -334,10 +334,10 @@ let
     };
 
     "multidict" = python.mkDerivation {
-      name = "multidict-4.7.5";
+      name = "multidict-4.7.6";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/61/b4/475114b3f1671da634f89239e61038f8742d9ac13aa34b32a05bf8022d22/multidict-4.7.5.tar.gz";
-        sha256 = "aee283c49601fa4c13adc64c09c978838a7e812f85377ae130a24d7198c0331e";
+        url = "https://files.pythonhosted.org/packages/65/d4/fabdcc5ee4451c8a8e177e27ddfd131a53a82ecc5a3b68468b7e9f8d70b4/multidict-4.7.6.tar.gz";
+        sha256 = "fbb77a75e529021e7c4a8d4e823d88ef4d23674a202be4f5addffc72cbb91430";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -560,10 +560,10 @@ let
     };
 
     "toml" = python.mkDerivation {
-      name = "toml-0.10.0";
+      name = "toml-0.10.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/b9/19/5cbd78eac8b1783671c40e34bb0fa83133a06d340a38b55c645076d40094/toml-0.10.0.tar.gz";
-        sha256 = "229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c";
+        url = "https://files.pythonhosted.org/packages/da/24/84d5c108e818ca294efe7c1ce237b42118643ce58a14d2462b3b2e3800d5/toml-0.10.1.tar.gz";
+        sha256 = "926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
