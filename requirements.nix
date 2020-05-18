@@ -281,10 +281,10 @@ let
     };
 
     "loguru" = python.mkDerivation {
-      name = "loguru-0.4.1";
+      name = "loguru-0.5.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/b8/b7/ec749f8f95454d6043900f99d8e6ec48be89f62d861e909c3eb0407c54a7/loguru-0.4.1.tar.gz";
-        sha256 = "a6101fd435ac89ba5205a105a26a6ede9e4ddbb4408a6e167852efca47806d11";
+        url = "https://files.pythonhosted.org/packages/7b/ae/a0e2d02fb46e5bb23a7e58f7bdace699f8173eb0271909b4bc4d90f95460/loguru-0.5.0.tar.gz";
+        sha256 = "1e0e6ff59be5e22f863d909ca989e34bb14c21b374f6af45281e603d003dbb96";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -470,10 +470,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-46.3.1";
+      name = "setuptools-46.4.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/23/79/1601b04682bcfd9563f8b99d7b05d72605ca174c98851ba1d2155d021e10/setuptools-46.3.1.zip";
-        sha256 = "1c22cd6aae116930efec56de05347ee89ca43b1f1c09c147984e7e7c4a133c85";
+        url = "https://files.pythonhosted.org/packages/ac/d6/0f6c0d9d0b07bbb2085e94a71aded1e137c7c9002ac54924bc1c0adf748a/setuptools-46.4.0.zip";
+        sha256 = "4334fc63121aafb1cc98fd5ae5dd47ea8ad4a38ad638b47af03a686deb14ef5b";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
