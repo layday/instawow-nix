@@ -298,10 +298,10 @@ let
     };
 
     "mako" = python.mkDerivation {
-      name = "mako-1.1.2";
+      name = "mako-1.1.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/42/64/fc7c506d14d8b6ed363e7798ffec2dfe4ba21e14dda4cfab99f4430cba3a/Mako-1.1.2.tar.gz";
-        sha256 = "3139c5d64aa5d175dbafb95027057128b5fbd05a40c53999f3905ceb53366d9d";
+        url = "https://files.pythonhosted.org/packages/72/89/402d2b4589e120ca76a6aed8fee906a0f5ae204b50e455edd36eda6e778d/Mako-1.1.3.tar.gz";
+        sha256 = "8195c8c1400ceb53496064314c6736719c6f25e7479cd24c77be3d9361cddc27";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -470,10 +470,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-47.1.0";
+      name = "setuptools-47.1.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/26/56/5cf6861a36bcaee9239f99fd92ea3c7b802b2939e5fe1eddab01f5974302/setuptools-47.1.0.zip";
-        sha256 = "a589e823db2a3c2ad25c189abd840ecad25e697fc969eeb92a2e2cbb50a235ad";
+        url = "https://files.pythonhosted.org/packages/25/bf/a37e89d3148221fedd4def62bb68749041d79f3840d58a7943f81a6f6c6e/setuptools-47.1.1.zip";
+        sha256 = "145fa62b9d7bb544fce16e9b5a9bf4ab2032d2f758b7cd674af09a92736aff74";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
