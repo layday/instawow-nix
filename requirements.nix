@@ -594,10 +594,10 @@ let
     };
 
     "wcwidth" = python.mkDerivation {
-      name = "wcwidth-0.1.9";
+      name = "wcwidth-0.2.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/25/9d/0acbed6e4a4be4fc99148f275488580968f44ddb5e69b8ceb53fc9df55a0/wcwidth-0.1.9.tar.gz";
-        sha256 = "ee73862862a156bf77ff92b09034fc4825dd3af9cf81bc5b360668d425f3c5f1";
+        url = "https://files.pythonhosted.org/packages/bd/93/396f82ece739ca551c2c1c74938a016c44263173d3eb83693ae9dbc33557/wcwidth-0.2.2.tar.gz";
+        sha256 = "3de2e41158cb650b91f9654cbf9a3e053cee0719c9df4ddc11e4b568669e9829";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -606,7 +606,7 @@ let
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/jquast/wcwidth";
         license = licenses.mit;
-        description = "Measures number of Terminal column cells of wide-character codes";
+        description = "Measures the displayed width of unicode strings in a terminal";
       };
     };
 
@@ -652,7 +652,7 @@ let
   localOverridesFile = ./requirements_override.nix;
   localOverrides = import localOverridesFile { inherit pkgs python; };
   commonOverrides = [
-        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "100c15ec7dfe7d241402ecfb1e796328d0eaf1ec"; sha256 = "0akfkvdakcdxc1lrxznh1rz2811x4pafnsq3jnyr5pn3m30pc7db"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
+        (let src = pkgs.fetchFromGitHub { owner = "nix-community"; repo = "pypi2nix-overrides"; rev = "90e891e83ffd9e55917c48d24624454620d112f0"; sha256 = "0cl1r3sxibgn1ks9xyf5n3rdawq4hlcw4n6xfhg3s1kknz54jp9y"; } ; in import "${src}/overrides.nix" { inherit pkgs python; })
   ];
   paramOverrides = [
     (overrides { inherit pkgs python; })
