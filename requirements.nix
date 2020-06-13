@@ -281,10 +281,10 @@ let
     };
 
     "loguru" = python.mkDerivation {
-      name = "loguru-0.5.0";
+      name = "loguru-0.5.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7b/ae/a0e2d02fb46e5bb23a7e58f7bdace699f8173eb0271909b4bc4d90f95460/loguru-0.5.0.tar.gz";
-        sha256 = "1e0e6ff59be5e22f863d909ca989e34bb14c21b374f6af45281e603d003dbb96";
+        url = "https://files.pythonhosted.org/packages/6d/aa/1c523f7955c718f603d0a7c6e72f0593e7335d967fabdce589ab86afaa9e/loguru-0.5.1.tar.gz";
+        sha256 = "70201d5fce26da89b7a5f168caa2bb674e06b969829f56737db1d6472e53e7c3";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
