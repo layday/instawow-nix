@@ -234,7 +234,6 @@ let
         self."questionary"
         self."slpp"
         self."sqlalchemy"
-        self."typing-extensions"
         self."yarl"
       ];
       meta = with pkgs.stdenv.lib; {
@@ -573,23 +572,6 @@ let
         homepage = "https://github.com/uiri/toml";
         license = licenses.mit;
         description = "Python Library for Tom's Obvious, Minimal Language";
-      };
-    };
-
-    "typing-extensions" = python.mkDerivation {
-      name = "typing-extensions-3.7.4.2";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/6a/28/d32852f2af6b5ead85d396249d5bdf450833f3a69896d76eb480d9c5e406/typing_extensions-3.7.4.2.tar.gz";
-        sha256 = "79ee589a3caca649a9bfd2a8de4709837400dfa00b6cc81962a1e6a1815969ae";
-};
-      doCheck = commonDoCheck;
-      format = "setuptools";
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/python/typing/blob/master/typing_extensions/README.rst";
-        license = licenses.psfl;
-        description = "Backported and Experimental Type Hints for Python 3.5+";
       };
     };
 
