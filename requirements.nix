@@ -576,10 +576,10 @@ let
     };
 
     "wcwidth" = python.mkDerivation {
-      name = "wcwidth-0.2.4";
+      name = "wcwidth-0.2.5";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/2e/30/268d9d3ed18439b6983a8e630cd52d81fd7460a152d6e801d1b8394e51a1/wcwidth-0.2.4.tar.gz";
-        sha256 = "8c6b5b6ee1360b842645f336d9e5d68c55817c26d3050f46b235ef2bc650e48f";
+        url = "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz";
+        sha256 = "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
