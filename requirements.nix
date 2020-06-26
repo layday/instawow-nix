@@ -542,10 +542,10 @@ let
     };
 
     "sqlalchemy" = python.mkDerivation {
-      name = "sqlalchemy-1.3.17";
+      name = "sqlalchemy-1.3.18";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/84/f4/5a61726869da51f37f643ea92bfa440e32eb182bdc1a1c7cfc9504930a95/SQLAlchemy-1.3.17.tar.gz";
-        sha256 = "156a27548ba4e1fed944ff9fcdc150633e61d350d673ae7baaf6c25c04ac1f71";
+        url = "https://files.pythonhosted.org/packages/02/80/c83986fceeed04f7d42e3fd8a67e94e87b56afb223ee653e8a4a8986361e/SQLAlchemy-1.3.18.tar.gz";
+        sha256 = "da2fb75f64792c1fc64c82313a00c728a7c301efe6a60b7a9fe35b16b4368ce7";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
