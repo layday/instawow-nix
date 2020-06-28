@@ -4,8 +4,8 @@ async-timeout==3.0.1
 attrs==19.3.0
 chardet==3.0.4
 click==7.1.2
-idna==2.9
-instawow==1.8.3
+idna==2.10
+instawow==1.8.4
 jellyfish==0.7.2
 Jinja2==2.11.2
 loguru==0.5.1

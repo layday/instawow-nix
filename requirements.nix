@@ -193,10 +193,10 @@ let
     };
 
     "idna" = python.mkDerivation {
-      name = "idna-2.9";
+      name = "idna-2.10";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/cb/19/57503b5de719ee45e83472f339f617b0c01ad75cba44aba1e4c97c2b0abd/idna-2.9.tar.gz";
-        sha256 = "7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb";
+        url = "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz";
+        sha256 = "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -210,10 +210,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.8.3";
+      name = "instawow-1.8.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ff/fb/e634fe6e7f73bc6b88cbcbf62626d2c7982c5811f0e3ccc4a4bc084a8c37/instawow-1.8.3.tar.gz";
-        sha256 = "a6562cdbd79c869160ff2b25b8150120447a665a6f152e50761bff3ae8d193c7";
+        url = "https://files.pythonhosted.org/packages/da/9a/02476bae4951365c3eb11e79c0f68a8e4a90cb52d18a208a0a6dce73d229/instawow-1.8.4.tar.gz";
+        sha256 = "bc1fbe0c53313a67eaa156902f06dff6b407efd6da68f51269305e8c3436aff4";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
