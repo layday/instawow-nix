@@ -5,7 +5,7 @@ attrs==19.3.0
 chardet==3.0.4
 click==7.1.2
 idna==2.10
-instawow==1.9.0
+instawow==1.9.1
 jellyfish==0.7.2
 Jinja2==2.11.2
 loguru==0.5.1
