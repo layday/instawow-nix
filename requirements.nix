@@ -210,10 +210,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.9.1";
+      name = "instawow-1.10.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/25/f9/d23263e299597045ddd3f10489539dbc20acd20d74bcc4febbd1fa25bbb8/instawow-1.9.1.tar.gz";
-        sha256 = "5725a8abb12de1f8829ed8c10e2ad47ef52fb20e52f8af1e282c3b61ece5732c";
+        url = "https://files.pythonhosted.org/packages/bc/59/e43d52706d1216f23021da34159f3580851d581a9197f58f7a913984e6e7/instawow-1.10.0.tar.gz";
+        sha256 = "75421fcac0f4993a2dcefc3794a43a797b1bfde73b1daa82b02c1f491249660c";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -244,10 +244,10 @@ let
     };
 
     "jellyfish" = python.mkDerivation {
-      name = "jellyfish-0.7.2";
+      name = "jellyfish-0.8.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/3f/80/bcacc7affb47be7279d7d35225e1a932416ed051b315a7f9df20acf04cbe/jellyfish-0.7.2.tar.gz";
-        sha256 = "cb09c50d7e2bb7b926fc7654762bc81f9c629e0c92ae7137bf22b34f39515286";
+        url = "https://files.pythonhosted.org/packages/04/3f/d03cb056f407ef181a45569255348457b1a0915fc4eb23daeceb930a68a4/jellyfish-0.8.2.tar.gz";
+        sha256 = "a499741401512d05bbd3556e448e960bc908eba3879fb73d450e8e91566a030b";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -469,10 +469,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-49.1.0";
+      name = "setuptools-49.1.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/8b/0f/5f135746c4d0c95fcc3c9a30ac942330bbdf092879ccaae7e3dcba6ea214/setuptools-49.1.0.zip";
-        sha256 = "60351853f8c093ef57224695ee989d5d074168f6b93dae000fa9996072adaba3";
+        url = "https://files.pythonhosted.org/packages/7b/a2/dd3f48637e928459410c471fc4ef0a31c6f96e68dec25b21741170768ad6/setuptools-49.1.1.zip";
+        sha256 = "a6500a148c20de8982c06835901c31b25f4f4fbe365e81abe1aaa598bc9ca4f4";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
