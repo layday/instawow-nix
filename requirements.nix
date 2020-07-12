@@ -210,10 +210,10 @@ let
     };
 
     "instawow" = python.mkDerivation {
-      name = "instawow-1.10.0";
+      name = "instawow-1.10.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/bc/59/e43d52706d1216f23021da34159f3580851d581a9197f58f7a913984e6e7/instawow-1.10.0.tar.gz";
-        sha256 = "75421fcac0f4993a2dcefc3794a43a797b1bfde73b1daa82b02c1f491249660c";
+        url = "https://files.pythonhosted.org/packages/37/e3/2d01e5e9f178555eed2fc51f24d10c4ec00e67c4f6622a1c7edc828854e3/instawow-1.10.1.tar.gz";
+        sha256 = "0e0736df7ce7446d5298f8493fa74971b7279b3c0c0813e646b3502bf15436ab";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -469,10 +469,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-49.1.1";
+      name = "setuptools-49.1.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/7b/a2/dd3f48637e928459410c471fc4ef0a31c6f96e68dec25b21741170768ad6/setuptools-49.1.1.zip";
-        sha256 = "a6500a148c20de8982c06835901c31b25f4f4fbe365e81abe1aaa598bc9ca4f4";
+        url = "https://files.pythonhosted.org/packages/48/e2/68a7f24fbeb842546abf1d4709ec8190bcd50dc023e1ba8d7781bc574384/setuptools-49.1.2.zip";
+        sha256 = "aa5e40796e346e1b23ab2b74d074dd825a18f6209a13a0858a5be6fd48a5f127";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
