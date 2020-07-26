@@ -8,17 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check-out master branch
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
     - name: Check-out main repo
       uses: actions/checkout@v2
       with:
         repository: layday/instawow
         path: instawow
-        ref: for-nix
     - name: Install Nix
-      uses: cachix/install-nix-action@v6
+      uses: cachix/install-nix-action@v10
     - name: Install Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: '3.7'
     - name: Install nox
@@ -26,14 +25,11 @@ jobs:
         python -m pip install nox
     - name: Generate Nix expression from PyPI package
       run: |
-        nox -f instawow/noxfile.py -s nixify
+        python -m nox -f instawow/noxfile.py -s nixify
       env:
         INSTAWOW_NIXIFY_DIR: '..'
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v2.5.0
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update
-        branch: master
         file_pattern: requirements*
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
