@@ -376,10 +376,10 @@ let
     };
 
     "pip" = python.mkDerivation {
-      name = "pip-20.1.1";
+      name = "pip-20.2";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/08/25/f204a6138dade2f6757b4ae99bc3994aac28a5602c97ddb2a35e0e22fbc4/pip-20.1.1.tar.gz";
-        sha256 = "27f8dc29387dd83249e06e681ce087e6061826582198a425085e0bf4c1cf3a55";
+        url = "https://files.pythonhosted.org/packages/b9/27/a9007a575c8a8e80c22144fec5df3943fd304dfa791bed44a0130e984803/pip-20.2.tar.gz";
+        sha256 = "912935eb20ea6a3b5ed5810dde9754fde5563f5ca9be44a8a6e5da806ade970b";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
