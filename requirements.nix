@@ -396,10 +396,10 @@ let
     };
 
     "prompt-toolkit" = python.mkDerivation {
-      name = "prompt-toolkit-3.0.5";
+      name = "prompt-toolkit-3.0.6";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/69/19/3aa4bf17e1cbbdfe934eb3d5b394ae9a0a7fb23594a2ff27e0fdaf8b4c59/prompt_toolkit-3.0.5.tar.gz";
-        sha256 = "563d1a4140b63ff9dd587bda9557cffb2fe73650205ab6f4383092fb882e7dc8";
+        url = "https://files.pythonhosted.org/packages/c4/c6/03da4efaf73f0cb5a34957fdac12046eb8d8e81618bad6f60464215b829a/prompt_toolkit-3.0.6.tar.gz";
+        sha256 = "7630ab85a23302839a0f26b31cc24f518e6155dea1ed395ea61b42c45941b6a6";
 };
       doCheck = commonDoCheck;
       format = "pyproject";
@@ -499,10 +499,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-49.3.0";
+      name = "setuptools-49.3.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/14/ca/441729af4f3d11408c880fbca98c607a02bf4e00b332331d5cfa78259827/setuptools-49.3.0.zip";
-        sha256 = "912c5cdd856fc0261147e81e71cb45c47636c0e3cfe6d64bf442412685277470";
+        url = "https://files.pythonhosted.org/packages/02/f7/6996956ac78bee9043ad1884a9c0ec5f069d538f76631435ac52286a2190/setuptools-49.3.1.zip";
+        sha256 = "1c7b51fba5d83160d540d18b2bf08fd546357488adf9ddbca08cc1e997bd5c18";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
