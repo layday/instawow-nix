@@ -499,10 +499,10 @@ let
     };
 
     "setuptools" = python.mkDerivation {
-      name = "setuptools-49.3.1";
+      name = "setuptools-49.5.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/02/f7/6996956ac78bee9043ad1884a9c0ec5f069d538f76631435ac52286a2190/setuptools-49.3.1.zip";
-        sha256 = "1c7b51fba5d83160d540d18b2bf08fd546357488adf9ddbca08cc1e997bd5c18";
+        url = "https://files.pythonhosted.org/packages/7b/86/8d6cae997e2c9fedf9f805e386df6b8308106697533a9c1620fa1ec4bebe/setuptools-49.5.0.zip";
+        sha256 = "557b91afcc37236ae2f4ea219d643bf85305e5f294bc3d2ba7c8f3a3fb1107dd";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
@@ -635,10 +635,10 @@ let
     };
 
     "wheel" = python.mkDerivation {
-      name = "wheel-0.34.2";
+      name = "wheel-0.35.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz";
-        sha256 = "8788e9155fe14f54164c1b9eb0a319d98ef02c160725587ad60f14ddc57b6f96";
+        url = "https://files.pythonhosted.org/packages/83/72/611c121b6bd15479cb62f1a425b2e3372e121b324228df28e64cc28b01c2/wheel-0.35.1.tar.gz";
+        sha256 = "99a22d87add3f634ff917310a3d87e499f19e663413a52eb9232c447aa646c9f";
 };
       doCheck = commonDoCheck;
       format = "setuptools";
